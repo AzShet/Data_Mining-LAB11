@@ -1,5 +1,7 @@
-polars
-numpy
-scikit-learn
-deap
-matplotlib
+# requirements.txt
+polars==0.20.5
+numpy==1.26.4
+scikit-learn==1.4.2
+deap==1.4.1
+matplotlib==3.8.4
+pytest==8.1.1
