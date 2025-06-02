@@ -104,6 +104,19 @@ def test_analizar_outliers_multivariado():
     outliers, distancias = analizar_outliers_multivariado(df)
     assert len(outliers) == df.shape[0]  # Verifica que el número de outliers coincida con el número de filas
 
+def test_graficar_valores_reales_vs_predichos():
+    """Test visual para asegurar que la función de graficado se ejecuta sin errores."""
+
+    # Datos de prueba (valores escalados)
+    y_real = np.array([0.1, 0.4, 0.6, 0.9, 1.0])
+    y_pred = np.array([0.2, 0.5, 0.5, 0.85, 0.95])
+
+    try:
+        graficar_valores_reales_vs_predichos(y_real, y_pred)
+    except Exception as e:
+        pytest.fail(f"La función lanzó una excepción inesperada: {e}")
+
+
 def test_probar_multiples_configuraciones():
     df = generar_dataframe_prueba()
     X, y = separar_variables(df, 'Sales')

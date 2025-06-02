@@ -228,3 +228,22 @@ def probar_multiples_configuraciones(X, y, configuraciones):
         })
 
     return resultados
+
+def graficar_valores_reales_vs_predichos(y_real, y_predicho):
+    """
+    Grafica una comparación entre valores reales y predichos escalados.
+
+    Parameters:
+    - y_real (array): valores reales escalados
+    - y_predicho (array): valores predichos por el modelo escalados
+    """
+    plt.figure(figsize=(10, 5))
+    plt.plot(y_real, label='Valor real (escalado)', color='blue', linewidth=2)
+    plt.plot(y_predicho, label='Predicción (escalada)', color='orange', linestyle='--', linewidth=2)
+    plt.title('Comparación: Valores reales vs Predicciones (Escalados)')
+    plt.xlabel('Observaciones')
+    plt.ylabel('Ventas escaladas')
+    plt.legend()
+    plt.grid(True)
+    plt.tight_layout()
+    plt.show()

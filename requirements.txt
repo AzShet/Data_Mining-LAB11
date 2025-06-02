@@ -1,0 +1,5 @@
+polars
+numpy
+scikit-learn
+deap
+matplotlib
